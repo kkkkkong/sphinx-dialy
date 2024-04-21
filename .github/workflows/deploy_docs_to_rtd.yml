@@ -69,9 +69,14 @@ jobs:
 
           echo "Generate the api doc"
           pip install sphinx
+          echo "Generate the api doc2"
+          
           sphinx-apidoc -o source/API/ ./${PACKAGE_NAME} -f -E -M
+          echo "Generate the api doc2"
+          
           sed -i '1d' source/API/modules.rst
           sed -i '1i\API' source/API/modules.rst
+          echo "Generate the api doc2"
 
           git add .
           git status
