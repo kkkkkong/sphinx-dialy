@@ -43,7 +43,8 @@ jobs:
       - name: Summit repo to docs branch.
         run: |
           ls
-          rm -r main
+          # 删除原有文件
+          rm -r source
 
           git clone -b ${SUBMMIT_BRANCH} $CLONE_URL ${SUBMMIT_BRANCH}
           cd ${SUBMMIT_BRANCH}
