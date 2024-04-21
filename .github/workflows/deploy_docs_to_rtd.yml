@@ -69,7 +69,7 @@ jobs:
 
           echo "Generate the api doc"
           pip install sphinx
-          echo "Generate the api doc2"
+          echo "Generate the api doc2./${PACKAGE_NAME}"
           
           sphinx-apidoc -o source/API/ ./${PACKAGE_NAME} -f -E -M
           echo "Generate the api doc2"
